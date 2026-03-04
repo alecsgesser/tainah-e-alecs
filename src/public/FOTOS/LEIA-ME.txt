@@ -1,0 +1,48 @@
+=============================================
+  📸 PASTA DE FOTOS — Wedding Site Tainah & Alecsander
+=============================================
+
+Coloque suas fotos nesta pasta com os seguintes nomes:
+
+SEÇÃO PRINCIPAL (HERO):
+  hero.jpg          → Foto principal do casal (1920x1080 ou maior)
+
+SEÇÃO "NOSSA HISTÓRIA":
+  story1.jpg        → Foto "O Primeiro Encontro"
+  story2.jpg        → Foto 'O Primeiro "Eu te amo"'
+  story3.jpg        → Foto "O Pedido"
+  story4.jpg        → Foto "O Grande Dia"
+
+SEÇÃO "GALERIA":
+  gallery1.jpg      → Foto destaque (proporção 16:9)
+  gallery2.jpg      → Foto da galeria
+  gallery3.jpg      → Foto da galeria
+  gallery4.jpg      → Foto da galeria
+  gallery5.jpg      → Foto da galeria
+  gallery6.jpg      → Foto destaque (proporção 16:9)
+  gallery7.jpg      → Foto da galeria
+  gallery8.jpg      → Foto da galeria
+
+SEÇÃO "O EVENTO":
+  venue.jpg         → Foto do local do casamento (usada como fundo)
+  rsvp-bg.jpg       → Foto de fundo da seção RSVP
+
+SEÇÃO "NOSSA TURMA" — DAMAS:
+  bm1.jpg           → Dama de honra principal
+  bm2.jpg           → Dama de honra 2
+  bm3.jpg           → Dama de honra 3
+  bm4.jpg           → Dama de honra 4
+
+SEÇÃO "NOSSA TURMA" — PADRINHOS:
+  gm1.jpg           → Padrinho principal
+  gm2.jpg           → Padrinho 2
+  gm3.jpg           → Padrinho 3
+  gm4.jpg           → Padrinho 4
+
+=============================================
+DICAS:
+- Prefira imagens em JPG para melhor performance
+- hero.jpg deve ter pelo menos 1920x1080px
+- Fotos de pessoas serão recortadas em círculo
+- O site funciona sem as fotos (exibe fundo colorido)
+=============================================
