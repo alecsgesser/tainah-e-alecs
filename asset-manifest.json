@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/wedding-site/static/js/main.916def39.js",
-    "index.html": "/wedding-site/index.html",
-    "main.916def39.js.map": "/wedding-site/static/js/main.916def39.js.map"
+    "main.js": "/my-marriage-app/static/js/main.916def39.js",
+    "index.html": "/my-marriage-app/index.html",
+    "main.916def39.js.map": "/my-marriage-app/static/js/main.916def39.js.map"
   },
   "entrypoints": [
     "static/js/main.916def39.js"
