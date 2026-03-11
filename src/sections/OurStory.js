@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { colors } from '../theme';
 
 const events = [
   {
@@ -35,15 +36,15 @@ const events = [
 
 export default function OurStory() {
   return (
-    <Box id="nossa-historia" sx={{ py: { xs: 8, md: 14 }, background: '#faf8f5', overflow: 'hidden' }}>
+    <Box id="nossa-historia" sx={{ py: { xs: 8, md: 14 }, background: colors.lightBackground, overflow: 'hidden' }}>
       <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 10 }, px: 3 }}>
-        <Typography variant="h6" sx={{ color: '#c9a96e', letterSpacing: '0.35em', fontSize: '0.7rem', mb: 2 }}>
+        <Typography variant="h6" sx={{ color: colors.gold, letterSpacing: '0.35em', fontSize: '0.7rem', mb: 2 }}>
           NOSSA JORNADA
         </Typography>
-        <Typography variant="h2" sx={{ fontSize: { xs: '2.5rem', md: '4rem' }, color: '#2c1f14', fontStyle: 'italic' }}>
+        <Typography variant="h2" sx={{ fontSize: { xs: '2.5rem', md: '4rem' }, color: colors.darkBrown, fontStyle: 'italic' }}>
           Nossa História
         </Typography>
-        <Box sx={{ width: 60, height: 1, background: '#c9a96e', mx: 'auto', mt: 3 }} />
+        <Box sx={{ width: 60, height: 1, background: colors.gold, mx: 'auto', mt: 3 }} />
       </Box>
 
       {/* Timeline */}
@@ -52,7 +53,7 @@ export default function OurStory() {
         <Box sx={{
           position: 'absolute',
           left: '50%', top: 0, bottom: 0,
-          width: 1, background: 'linear-gradient(to bottom, transparent, #c9a96e 10%, #c9a96e 90%, transparent)',
+          width: 1, background: `linear-gradient(to bottom, transparent, ${colors.green} 10%, ${colors.green} 90%, transparent)`,
           display: { xs: 'none', md: 'block' },
         }} />
 
@@ -68,15 +69,15 @@ export default function OurStory() {
               }}>
                 <Typography sx={{
                   fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: '4rem', fontWeight: 300, color: '#f0ebe4',
+                  fontSize: '4rem', fontWeight: 300, color: colors.border,
                   lineHeight: 1, mb: -1, position: 'relative',
                 }}>
                   {ev.year}
                 </Typography>
-                <Typography variant="h4" sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, color: '#2c1f14', fontStyle: 'italic', mb: 2 }}>
+                <Typography variant="h4" sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, color: colors.darkBrown, fontStyle: 'italic', mb: 2 }}>
                   {ev.title}
                 </Typography>
-                <Typography sx={{ color: '#6b5b4e', lineHeight: 1.8, fontSize: '0.9rem', fontWeight: 300 }}>
+                <Typography sx={{ color: colors.mediumBrown, lineHeight: 1.8, fontSize: '0.9rem', fontWeight: 300 }}>
                   {ev.desc}
                 </Typography>
               </Box>
@@ -86,11 +87,11 @@ export default function OurStory() {
             <Grid item md={2} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
               <Box sx={{
                 width: 44, height: 44, borderRadius: '50%',
-                background: '#faf8f5', border: '2px solid #c9a96e',
+                background: colors.lightBackground, border: `2px solid ${colors.greenDark}`,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 position: 'relative', zIndex: 2,
               }}>
-                <FavoriteIcon sx={{ color: '#c9a96e', fontSize: 18 }} />
+                <FavoriteIcon sx={{ color: colors.greenDark, fontSize: 18 }} />
               </Box>
             </Grid>
 
@@ -103,7 +104,7 @@ export default function OurStory() {
                 position: 'relative',
                 '&::before': {
                   content: '""', position: 'absolute', inset: 0,
-                  background: 'linear-gradient(135deg, rgba(201,169,110,0.15), transparent)',
+                  background: `linear-gradient(135deg, rgba(201,169,110,0.15), transparent)`,
                   zIndex: 1,
                 },
                 boxShadow: '0 20px 60px rgba(44,31,20,0.15)',

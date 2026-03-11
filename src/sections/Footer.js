@@ -2,23 +2,24 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { colors } from '../theme';
 
 export default function Footer() {
   return (
     <Box sx={{
-      background: '#1a1008',
+      background: colors.darkBackground,
       py: { xs: 6, md: 10 },
       textAlign: 'center', px: 3,
     }}>
       <Typography variant="h3" sx={{
-        color: '#fff', fontStyle: 'italic',
+        color: colors.white, fontStyle: 'italic',
         fontSize: { xs: '2.5rem', md: '4rem' },
         mb: 1,
       }}>
-        Tainah <span style={{ color: '#c9a96e', fontStyle: 'normal', fontSize: '0.7em' }}>✦</span> Alecsander
+        Tainah <span style={{ color: colors.gold, fontStyle: 'normal', fontSize: '0.7em' }}>✦</span> Alecsander
       </Typography>
 
-      <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.7rem', letterSpacing: '0.3em', mb: 5 }}>
+      <Typography sx={{ color: colors.whiteTransparent, fontSize: '0.7rem', letterSpacing: '0.3em', mb: 5 }}>
         24 DE MAIO DE 2026
       </Typography>
 
@@ -31,11 +32,11 @@ export default function Footer() {
         ].map(item => (
           <Box key={item.label} component="a" href={item.href}
             sx={{
-              color: 'rgba(255,255,255,0.4)', fontSize: '0.65rem',
+              color: colors.whiteTransparent, fontSize: '0.65rem',
               letterSpacing: '0.15em', textDecoration: 'none',
               transition: 'color 0.2s',
               display: { xs: 'none', sm: 'block' },
-              '&:hover': { color: '#c9a96e' },
+              '&:hover': { color: colors.gold },
             }}>
             {item.label.toUpperCase()}
           </Box>
@@ -43,9 +44,9 @@ export default function Footer() {
       </Box>
 
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, mb: 4 }}>
-        <Box sx={{ width: 60, height: '1px', background: 'rgba(201,169,110,0.3)' }} />
-        <FavoriteIcon sx={{ color: '#c9a96e', fontSize: 16 }} />
-        <Box sx={{ width: 60, height: '1px', background: 'rgba(201,169,110,0.3)' }} />
+        <Box sx={{ width: 60, height: '1px', background: `rgba(201,169,110,0.3)` }} />
+        <FavoriteIcon sx={{ color: colors.gold, fontSize: 16 }} />
+        <Box sx={{ width: 60, height: '1px', background: `rgba(201,169,110,0.3)` }} />
       </Box>
 
       <Box component="a" href="https://instagram.com" target="_blank" rel="noopener"
@@ -53,7 +54,7 @@ export default function Footer() {
           display: 'inline-flex', alignItems: 'center', gap: 1,
           color: 'rgba(255,255,255,0.3)', textDecoration: 'none',
           fontSize: '0.7rem', letterSpacing: '0.15em', mb: 4,
-          '&:hover': { color: '#c9a96e' }, transition: 'color 0.2s',
+          '&:hover': { color: colors.gold }, transition: 'color 0.2s',
         }}>
         <InstagramIcon sx={{ fontSize: 18 }} />
         @alecsgesser

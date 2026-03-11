@@ -3,6 +3,7 @@ import { Box, Typography, Modal, IconButton, Grid } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { colors } from '../theme';
 
 const photos = [
   { src: '/FOTOS/gallery1.jpg', span: 2 },
@@ -22,15 +23,15 @@ export default function Gallery() {
   const next = () => setSelected(s => (s < photos.length - 1 ? s + 1 : 0));
 
   return (
-    <Box id="galeria" sx={{ py: { xs: 8, md: 14 }, background: '#fff' }}>
+    <Box id="galeria" sx={{ py: { xs: 8, md: 14 }, background: colors.white }}>
       <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 10 }, px: 3 }}>
-        <Typography variant="h6" sx={{ color: '#c9a96e', letterSpacing: '0.35em', fontSize: '0.7rem', mb: 2 }}>
+        <Typography variant="h6" sx={{ color: 'text.primary', letterSpacing: '0.35em', fontSize: '0.7rem', mb: 2 }}>
           MEMÓRIAS
         </Typography>
-        <Typography variant="h2" sx={{ fontSize: { xs: '2.5rem', md: '4rem' }, color: '#2c1f14', fontStyle: 'italic' }}>
+        <Typography variant="h2" sx={{ fontSize: { xs: '2.5rem', md: '4rem' }, color: colors.darkBrown, fontStyle: 'italic' }}>
           Nossa Galeria
         </Typography>
-        <Box sx={{ width: 60, height: 1, background: '#c9a96e', mx: 'auto', mt: 3 }} />
+        <Box sx={{ width: 60, height: 1, background: colors.gold, mx: 'auto', mt: 3 }} />
       </Box>
 
       {/* Grid de fotos */}
@@ -48,12 +49,12 @@ export default function Gallery() {
               gridColumn: { xs: 'span 1', md: `span ${photo.span}` },
               aspectRatio: photo.span === 2 ? '16/9' : '1',
               overflow: 'hidden', cursor: 'pointer', position: 'relative',
-              background: 'linear-gradient(135deg, #e8d5b0, #c4a89a)',
+              background: colors.gradientGold,
               '&:hover img': { transform: 'scale(1.06)' },
               '&:hover::after': { opacity: 1 },
               '&::after': {
                 content: '""', position: 'absolute', inset: 0,
-                background: 'rgba(44,31,20,0.3)', opacity: 0,
+                background: colors.darkTransparent, opacity: 0,
                 transition: 'opacity 0.4s ease', zIndex: 1,
               },
             }}

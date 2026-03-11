@@ -6,6 +6,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { colors } from '../theme';
 
 const navItems = [
   { label: 'Nossa História', href: '#nossa-historia' },
@@ -27,23 +28,23 @@ export default function Navbar({ scrolled }) {
     backdropFilter: scrolled ? 'blur(12px)' : 'none',
   };
 
-  const linkColor = scrolled ? '#2c1f14' : '#fff';
+  const linkColor = scrolled ? colors.darkBrown : colors.white;
 
   return (
     <>
       <AppBar position="fixed" elevation={0} sx={navStyle}>
         <Toolbar sx={{ justifyContent: 'space-between', py: 1.5, px: { xs: 2, md: 6 } }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <FavoriteIcon sx={{ color: '#c9a96e', fontSize: 16 }} />
+            <FavoriteIcon sx={{ color: colors.gold, fontSize: 16 }} />
             <Box sx={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: { xs: '1.3rem', md: '1.6rem' },
               fontWeight: 400,
-              color: scrolled ? '#2c1f14' : '#fff',
+              color: scrolled ? colors.darkBrown : colors.white,
               letterSpacing: '0.05em',
               transition: 'color 0.4s ease',
             }}>
-              Tainah <span style={{ color: '#c9a96e', fontSize: '0.8em' }}>✦</span> Alecsander
+              Tainah <span style={{ color: colors.gold, fontSize: '0.8em' }}>✦</span> Alecsander
             </Box>
           </Box>
 
@@ -62,7 +63,7 @@ export default function Navbar({ scrolled }) {
                     fontSize: '0.7rem',
                     letterSpacing: '0.12em',
                     transition: 'color 0.3s ease',
-                    '&:hover': { color: '#c9a96e', backgroundColor: 'transparent' },
+                    '&:hover': { color: colors.gold, backgroundColor: 'transparent' },
                   }}
                 >
                   {item.label}
@@ -74,7 +75,7 @@ export default function Navbar({ scrolled }) {
       </AppBar>
 
       <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}
-        PaperProps={{ sx: { width: 280, background: '#faf8f5' } }}>
+        PaperProps={{ sx: { width: 280, background: colors.lightBackground } }}>
         <Box sx={{ p: 3 }}>
           <IconButton onClick={() => setDrawerOpen(false)} sx={{ mb: 3 }}>
             <CloseIcon />
@@ -83,7 +84,7 @@ export default function Navbar({ scrolled }) {
             {navItems.map(item => (
               <ListItem key={item.label} component="a" href={item.href}
                 onClick={() => setDrawerOpen(false)}
-                sx={{ py: 2, textDecoration: 'none', borderBottom: '1px solid #f0ebe4' }}>
+                sx={{ py: 2, textDecoration: 'none', borderBottom: `1px solid ${colors.border}` }}>
                 <ListItemText
                   primary={item.label}
                   primaryTypographyProps={{
@@ -91,7 +92,7 @@ export default function Navbar({ scrolled }) {
                     fontWeight: 300,
                     letterSpacing: '0.12em',
                     fontSize: '0.85rem',
-                    color: '#2c1f14',
+                    color: colors.darkBrown,
                     textTransform: 'uppercase',
                   }}
                 />
