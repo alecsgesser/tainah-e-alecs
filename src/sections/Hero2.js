@@ -15,15 +15,16 @@ export default function Hero() {
   return (
     <Box
       id="inicio"
+      className="parallax-bg"
       sx={{
-        minHeight: '100vh',
-        position: 'relative',
+        height: '100vh',
+        width: '100vw',
         display: 'flex',
-        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        overflow: 'hidden',
-        backgroundColor: '#000',
+        textAlign: 'center',
+        color: 'white',
+        //backgroundColor: 'background.dark',
       }}
     >
       {/* Background Video */}
@@ -34,7 +35,7 @@ export default function Hero() {
         loop
         playsInline
         style={{
-          position: 'absolute',
+          position: 'absolute', 
           top: '50%',
           left: '50%',
           width: '100%',
@@ -48,12 +49,12 @@ export default function Hero() {
       </video>
 
       {/* Gradient Overlay */}
-      <Box
+      <Box id="test1"
         sx={{
           position: 'absolute',
           inset: 0,
           zIndex: 1,
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%)',
+          background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(44 ,52,36, 1) 100%)',
         }}
       />
 

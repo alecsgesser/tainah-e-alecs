@@ -2,35 +2,15 @@ import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { colors } from '../theme';
+import maceio from '../public/FOTOS/maceio.jpg';
 
 const events = [
   {
     year: '2019',
     title: 'O Primeiro Encontro',
-    desc: 'Numa tarde de outono em São Paulo, nossos olhares se cruzaram pela primeira vez numa galeria de arte. Aquele momento simples mudaria nossas vidas para sempre.',
-    image: '/FOTOS/story1.jpg',
+    desc: 'Cada um vindo de um extremo do país, nos conhecemos em Curitiba quando nenhum dos dois buscava o amor. E assim, tão de repente, nostornamos lar um para o outro sem qualquer aviso prévio. E poderíamos até dizer que nos reconhecemos naquele momento e por isto nossa história evoluiu rapidamente,mas Clarice Lispector diria: “Não me lembro mais qual foi nosso começo. Sei que não começamos pelo começo. Já era amor antes de ser.” Se o destino nos trouxe até aqui ou não, hoje somos felizes e gratos em estar preparando este momento para celebrar com aqueles que mais amamos e nos apoiaram em cada etapa: a nossa família. Estamos ansiosos por este momento com vocês!',
+    image: maceio,
     side: 'right',
-  },
-  {
-    year: '2021',
-    title: 'O Primeiro "Eu te amo"',
-    desc: 'Dois anos de amizade e descobertas que floresceram naturalmente em amor. Numa noite estrelada à beira do mar, as palavras finalmente encontraram o caminho.',
-    image: '/FOTOS/story2.jpg',
-    side: 'left',
-  },
-  {
-    year: '2023',
-    title: 'O Pedido',
-    desc: 'Com o pôr do sol como cenário e o coração cheio de emoção, Alecs ajoelhou-se com o anel da avó. A resposta de Tainah foi um sim que ecoou pelo horizonte.',
-    image: '/FOTOS/story3.jpg',
-    side: 'right',
-  },
-  {
-    year: '2025',
-    title: 'O Grande Dia',
-    desc: 'Agora, convidamos as pessoas que amamos para testemunhar o início da nossa maior aventura: a vida a dois, juntos para sempre.',
-    image: '/FOTOS/story4.jpg',
-    side: 'left',
   },
 ];
 

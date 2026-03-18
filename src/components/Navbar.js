@@ -35,7 +35,7 @@ export default function Navbar({ scrolled }) {
       <AppBar position="fixed" elevation={0} sx={navStyle}>
         <Toolbar sx={{ justifyContent: 'space-between', py: 1.5, px: { xs: 2, md: 6 } }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <FavoriteIcon sx={{ color: colors.gold, fontSize: 16 }} />
+            <FavoriteIcon sx={{ color: colors.green     , fontSize: 16 }} />
             <Box sx={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: { xs: '1.3rem', md: '1.6rem' },
@@ -44,7 +44,7 @@ export default function Navbar({ scrolled }) {
               letterSpacing: '0.05em',
               transition: 'color 0.4s ease',
             }}>
-              Tainah <span style={{ color: colors.gold, fontSize: '0.8em' }}>✦</span> Alecsander
+              Tainah <span style={{ color: colors.green, fontSize: '0.8em' }}>✦</span> Alecsander
             </Box>
           </Box>
 

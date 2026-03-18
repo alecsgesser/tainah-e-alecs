@@ -59,16 +59,16 @@ export default function EventDetails() {
               <Grid item xs={12} sm={6} md={3} key={i} >
                 <Box sx={{
                   background: colors.white, p: 4, height: '100%',
-                  border: `1px solid ${colors.border}`,
+                  border: `1px solid background.dark`,
                   position: 'relative', overflow: 'hidden',
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                  '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 20px 50px rgba(44,31,20,0.1)' },
+                  '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 20px 50px rgba(26, 149, 30, 0.1)' },
                   '&::before': {
                     content: '""', position: 'absolute', top: 0, left: 0, right: 0,
-                    height: 3, background: colors.gradientGold,
+                    height: 4, background: colors.green,
                   },
                 }}>
-                  <Typography sx={{ color: colors.gold, fontSize: '0.65rem', letterSpacing: '0.3em', mb: 2 }}>
+                  <Typography sx={{ color: colors.green, fontSize: '0.65rem', letterSpacing: '0.3em', mb: 2 }}>
                     {card.label}
                   </Typography>
                   <Icon sx={{ color: colors.darkBrown, fontSize: 32, mb: 2 }} />
@@ -84,7 +84,7 @@ export default function EventDetails() {
                     <Box component="a" href={card.map} target="_blank" rel="noopener"
                       sx={{
                         display: 'inline-flex', alignItems: 'center', gap: 0.5,
-                        mt: 3, color: colors.gold, fontSize: '0.7rem', letterSpacing: '0.15em',
+                        mt: 3, color: colors.green, fontSize: '0.7rem', letterSpacing: '0.15em',
                         textDecoration: 'none', borderBottom: `1px solid ${colors.gold}`,
                         pb: 0.2, transition: 'opacity 0.2s',
                         '&:hover': { opacity: 0.7 },
@@ -101,7 +101,7 @@ export default function EventDetails() {
         {/* Dress code */}
         <Box sx={{
           mt: 8, p: { xs: 4, md: 6 },
-          background: 'linear-gradient(135deg, #2c1f14, #3d2b1a)',
+          background: `linear-gradient(135deg, ${colors.green}, ${colors.greenDark})`,
           textAlign: 'center',
           position: 'relative', overflow: 'hidden',
         }}>

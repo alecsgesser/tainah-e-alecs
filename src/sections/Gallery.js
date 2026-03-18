@@ -5,15 +5,20 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { colors } from '../theme';
 
+import maceio2 from '../public/FOTOS/maceio2.jpg';
+import maceio3 from '../public/FOTOS/maceio3.jpg';
+import maceio4 from '../public/FOTOS/maceio4.jpg';
+import pico from '../public/FOTOS/pico_malwee.jpg';
+import salton from '../public/FOTOS/salton.jpg';
+
+
+
 const photos = [
-  { src: '/FOTOS/gallery1.jpg', span: 2 },
-  { src: '/FOTOS/gallery2.jpg', span: 1 },
-  { src: '/FOTOS/gallery3.jpg', span: 1 },
-  { src: '/FOTOS/gallery4.jpg', span: 1 },
-  { src: '/FOTOS/gallery5.jpg', span: 1 },
-  { src: '/FOTOS/gallery6.jpg', span: 2 },
-  { src: '/FOTOS/gallery7.jpg', span: 1 },
-  { src: '/FOTOS/gallery8.jpg', span: 1 },
+ 
+  { src: maceio4, span: 2 },
+  { src: pico, span: 2 },
+  { src: salton, span: 1 },
+   { src: maceio3, span: 1 },
 ];
 
 export default function Gallery() {
