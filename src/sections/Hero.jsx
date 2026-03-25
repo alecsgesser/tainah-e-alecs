@@ -58,7 +58,6 @@ export default function Hero() {
         }}
       >
         <Typography variant="h5" sx={{ mb: 2, fontFamily: 'Montserrat', letterSpacing: '0.2em' }}>
-          O CASAMENTO DE
         </Typography>
         
         <Typography variant="h1" sx={{ mb: 3, fontSize: { xs: '4rem', md: '7rem' } }}>

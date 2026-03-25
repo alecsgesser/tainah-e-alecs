@@ -33,7 +33,7 @@ export default function Countdown() {
   ];
 
   return (
-    <Box sx={{
+    <Box id="countdown" sx={{
       py: { xs: 8, md: 12 },
       //background: `linear-gradient(135deg, background.dark 0%, background.dark 50%, background.dark 100%)`,
       position: 'relative', overflow: 'hidden',

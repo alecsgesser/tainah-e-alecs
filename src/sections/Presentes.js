@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography, Grid, Button } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import ChurchIcon from '@mui/icons-material/Church';
@@ -10,17 +10,17 @@ import FlatwareIcon from '@mui/icons-material/Flatware';
 import PixIcon from '@mui/icons-material/Pix';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import { colors } from '../theme';
+import qrcode from '../public/FOTOS/pix.png';
 
 const cards = [
   {
     icon: CardGiftcardIcon, title: 'Presente Criativo',
-    details: ['Usar a criatividade para nos brindar com um momento para curtir juntinhos ou qualquer experiência que vire memória boa.'],
-    map: 'https://maps.app.goo.gl/gCb91HLouriZW7KH8',
+    details: ['Usar a criatividade para nos presentear com um momento para curtir juntinhos ou qualquer experiência que vire memória boa.'],
   },
   {
     icon: PixIcon,  title: 'Pix Misterioso',
     details: ['Mas se a sua criatividade estiver de férias, um pix misterioso para ajudar na nossa futura lua de mel também vai fazer a gente sorrir do mesmo jeito.'],
-    map: 'https://maps.app.goo.gl/gCb91HLouriZW7KH8',
+    pix: '00020126580014BR.GOV.BCB.PIX0136d836ce62-a2e9-4d01-ab94-675a00deb25f5204000053039865802BR5925Alecsander Pasqualli Gess6009SAO PAULO62140510c3V1xCksaZ6304CFD9'
   },
  
  
@@ -28,7 +28,7 @@ const cards = [
 
 export default function PresentesDetails() {
   return (
-    <Box id="evento" sx={{
+    <Box id="presentes" sx={{
       py: { xs: 8, md: 14 },
       background: colors.lightBackground,
       position: 'relative', overflow: 'hidden',
@@ -51,15 +51,12 @@ export default function PresentesDetails() {
           </Typography>
           <Box sx={{ width: 60, height: 1, background: colors.gold, mx: 'auto', mt: 3, mb: 2 }} />
           <Box sx={{ maxWidth: 600, mx: 'auto' }}>
-          <Typography sx={{ color: colors.mediumBrown, fontSize: '0.9rem', fontWeight: 300 }}>
+          <Typography sx={{ color: colors.mediumBrown, fontSize: '1.1rem', fontWeight: 300 }}>
             Somos um casal com destino ainda incerto neste Brasilzão e, por isto, no momento não queremos presentes para guardar ou preencher o nosso atual lar. 
             Se quiser nos presentear, você pode:
             
           </Typography></Box>
-          <Typography sx={{ color: colors.mediumBrown, fontSize: '0.9rem', fontWeight: 300 }}>
-            
-            
-          </Typography>
+          
         </Box>
 
         <Grid container spacing={3} justifyContent="center">
@@ -78,18 +75,26 @@ export default function PresentesDetails() {
                     height: 3, background: colors.gradientGold,
                   },
                 }}>
-                  <Typography sx={{ color: colors.gold, fontSize: '0.65rem', letterSpacing: '0.3em', mb: 2 }}>
+                  <Typography sx={{ color: colors.gold, fontSize: '1.1rem', letterSpacing: '0.3em', mb: 2 }}>
                     {card.label}
                   </Typography>
                   <Icon sx={{ color: '#2c1f14', fontSize: 32, mb: 2 }} />
-                  <Typography variant="h5" sx={{ fontSize: '1.1rem', color: '#2c1f14', mb: 2, lineHeight: 1.3 }}>
+                  <Typography variant="h5" sx={{ fontSize: '1.2rem', color: '#2c1f14', mb: 2, lineHeight: 1.3 }}>
                     {card.title}
                   </Typography>
                   {card.details.map((d, j) => (
-                    <Typography key={j} sx={{ color: '#6b5b4e', fontSize: '0.85rem', fontWeight: 300, lineHeight: 1.8 }}>
+                    <Typography key={j} sx={{ color: '#6b5b4e', fontSize: '1rem', fontWeight: 300, lineHeight: 1.8 }}>
                       {d}
                     </Typography>
                   ))}
+                  {card.pix && (
+                    <Button variant="outlined" color="primary" sx={{ mt: 3, textTransform: 'none' }}   onClick={() => {
+                        navigator.clipboard.writeText(card.pix);
+                        alert('Código Pix copiado para a área de transferência!');
+                      }}>
+                      Copiar Código Pix
+                    </Button>
+                  )}
                   {card.map && (
                     <Box component="a" href={card.map} target="_blank" rel="noopener"
                       sx={{

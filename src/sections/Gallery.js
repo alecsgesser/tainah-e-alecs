@@ -5,20 +5,43 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { colors } from '../theme';
 
-import maceio2 from '../public/FOTOS/maceio2.jpg';
+import maceio from '../public/FOTOS/maceio.jpg';
+
+import cerejeiras from '../public/FOTOS/cerejeiras.jpg';
 import maceio3 from '../public/FOTOS/maceio3.jpg';
-import maceio4 from '../public/FOTOS/maceio4.jpg';
 import pico from '../public/FOTOS/pico_malwee.jpg';
 import salton from '../public/FOTOS/salton.jpg';
+
+import preWedding from '../public/FOTOS/pre_wedding.jpg';
+
+
+import formaturaGesser  from '../public/FOTOS/formatura_gesser.jpg';
+import formaturaTainah  from '../public/FOTOS/formatura_tainah.jpg';
+
+import serraSol  from '../public/FOTOS/serra_sol.jpg';
+import coldplay  from '../public/FOTOS/coldplay.jpg';
+
+import bento  from '../public/FOTOS/bento.jpg';
+import beto  from '../public/FOTOS/beto.jpg';
+
+
 
 
 
 const photos = [
- 
-  { src: maceio4, span: 2 },
-  { src: pico, span: 2 },
-  { src: salton, span: 1 },
-   { src: maceio3, span: 1 },
+  { src: preWedding, span: 2, aspectRatio: '16/9' },
+  { src: pico, span: 2, aspectRatio: '16/9' },
+  { src: salton, span: 1, aspectRatio: '1' },
+  { src: maceio3, span: 1, aspectRatio: '1' },
+  { src: cerejeiras, span: 1, aspectRatio: '1' },
+  { src: maceio, span: 1, aspectRatio: '1' },
+  { src: formaturaGesser, span: 2, aspectRatio: '3/4' },
+  { src: formaturaTainah, span: 2, aspectRatio: '3/4' },
+  { src: serraSol, span: 1, aspectRatio: '3/4' },
+  { src: coldplay, span: 1, aspectRatio: '3/4' },
+  { src: beto, span: 1, aspectRatio: '3/4' },
+  { src: bento, span: 1, aspectRatio: '3/4' },
+  
 ];
 
 export default function Gallery() {
@@ -28,13 +51,13 @@ export default function Gallery() {
   const next = () => setSelected(s => (s < photos.length - 1 ? s + 1 : 0));
 
   return (
-    <Box id="galeria" sx={{ py: { xs: 8, md: 14 }, background: colors.white }}>
+    <Box id="galeria" sx={{ position: 'relative',py: { xs: 8, md: 14 }, background: colors.greenDark }}>
       <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 10 }, px: 3 }}>
-        <Typography variant="h6" sx={{ color: 'text.primary', letterSpacing: '0.35em', fontSize: '0.7rem', mb: 2 }}>
+        <Typography variant="h6" sx={{ color: 'primary.main', letterSpacing: '0.35em', fontSize: '0.7rem', mb: 2 }}>
           MEMÓRIAS
         </Typography>
-        <Typography variant="h2" sx={{ fontSize: { xs: '2.5rem', md: '4rem' }, color: colors.darkBrown, fontStyle: 'italic' }}>
-          Nossa Galeria
+        <Typography variant="h2" sx={{ fontSize: { xs: '2.5rem', md: '4rem' }, color: 'text.light', fontStyle: 'italic' }}>
+          Galeria
         </Typography>
         <Box sx={{ width: 60, height: 1, background: colors.gold, mx: 'auto', mt: 3 }} />
       </Box>
@@ -51,9 +74,12 @@ export default function Gallery() {
             key={i}
             onClick={() => setSelected(i)}
             sx={{
+              borderRadius: 3,
               gridColumn: { xs: 'span 1', md: `span ${photo.span}` },
-              aspectRatio: photo.span === 2 ? '16/9' : '1',
-              overflow: 'hidden', cursor: 'pointer', position: 'relative',
+              aspectRatio: photo.aspectRatio,
+              overflow: 'hidden', 
+              cursor: 'pointer', 
+              position: 'relative',
               background: colors.gradientGold,
               '&:hover img': { transform: 'scale(1.06)' },
               '&:hover::after': { opacity: 1 },

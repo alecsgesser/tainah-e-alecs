@@ -9,11 +9,11 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { colors } from '../theme';
 
 const navItems = [
+  { label: 'Contagem Regressiva', href: '#countdown' },
   { label: 'Nossa História', href: '#nossa-historia' },
   { label: 'Galeria', href: '#galeria' },
-  { label: 'O Evento', href: '#evento' },
-  { label: 'Nossa Turma', href: '#turma' },
-  { label: 'Confirmar Presença', href: '#rsvp' },
+  { label: 'Evento', href: '#evento' },
+  { label: 'Presentes', href: '#presentes' },
 ];
 
 export default function Navbar({ scrolled }) {
