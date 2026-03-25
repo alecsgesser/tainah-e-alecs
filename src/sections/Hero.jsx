@@ -1,6 +1,6 @@
 import { Box, Typography, Container } from '@mui/material';
 import React, { useEffect, useState, useRef } from 'react';
-
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useInView } from 'react-intersection-observer';
 import homeVideo from '../public/FOTOS/home_page_web.mp4';
 
@@ -16,6 +16,13 @@ export default function Hero() {
         triggerOnce: true,
         threshold: 0.1,
     });
+
+    const handleArrowClick = () => {
+      window.scrollBy({
+        top: window.innerHeight,
+        behavior: 'smooth',
+      });
+    };
 
   return (
     <Box
@@ -80,6 +87,50 @@ export default function Hero() {
           </Typography>
         </Box>
       </Container>
+      
+      <Box
+        onClick={handleArrowClick}
+        sx={{
+          position: 'absolute',
+          bottom: '30px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 1,
+          animation: 'bounce 2s infinite',
+          cursor: 'pointer',
+          '@keyframes bounce': {
+            '0%, 100%': {
+              transform: 'translateX(-50%) translateY(0)',
+            },
+            '50%': {
+              transform: 'translateX(-50%) translateY(-10px)',
+            },
+          },
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: '0.875rem',
+            fontFamily: 'Montserrat',
+            letterSpacing: '0.15em',
+            color: 'white',
+            textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+            fontWeight: 300,
+          }}
+        >
+          MAIS DETALHES
+        </Typography>
+        <KeyboardArrowDownIcon
+          sx={{
+            fontSize: '40px',
+            color: 'white',
+            textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+          }}
+        />
+      </Box>
     </Box>
   );
 }
