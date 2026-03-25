@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tainah-e-alecs/static/css/main.f35a6656.css",
-    "main.js": "/tainah-e-alecs/static/js/main.f01a0492.js",
+    "main.js": "/tainah-e-alecs/static/js/main.a6f5653e.js",
     "static/media/home_page_web.mp4": "/tainah-e-alecs/static/media/home_page_web.77d0c7cae4ec5ccd594a.mp4",
     "static/media/o_primeiro_encontro.jpg": "/tainah-e-alecs/static/media/o_primeiro_encontro.832cf35bd0ef7b69a85a.jpg",
     "static/media/serra_sol.jpg": "/tainah-e-alecs/static/media/serra_sol.16cc249d64a360541dd2.jpg",
@@ -22,10 +22,10 @@
     "static/media/pix.png": "/tainah-e-alecs/static/media/pix.1f8ebb14690eb7a8f7df.png",
     "index.html": "/tainah-e-alecs/index.html",
     "main.f35a6656.css.map": "/tainah-e-alecs/static/css/main.f35a6656.css.map",
-    "main.f01a0492.js.map": "/tainah-e-alecs/static/js/main.f01a0492.js.map"
+    "main.a6f5653e.js.map": "/tainah-e-alecs/static/js/main.a6f5653e.js.map"
   },
   "entrypoints": [
     "static/css/main.f35a6656.css",
-    "static/js/main.f01a0492.js"
+    "static/js/main.a6f5653e.js"
   ]
 }
